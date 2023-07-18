@@ -1,1 +1,12 @@
-<p>top-filmes works!</p>
+<h2>Top 10 filmes no Brasil</h2>
+
+<mat-list>
+    <mat-list-item *ngFor="let filme of filmes">
+      <h3 matLine>{{ filme.title }}</h3>
+      <p matLine>Popularidade: {{ filme.popularity }}</p>
+      <button mat-icon-button (click)="curtirFilme(filme)">
+        <mat-icon>thumb_up</mat-icon>
+      </button>
+      <span>{{ filme.curtidas }}</span>
+    </mat-list-item>
+  </mat-list>
